@@ -26,8 +26,7 @@ class AppServiceProvider extends ServiceProvider
 
     protected function loadApiRoutes()
     {
-        Route::prefix('api')
-            ->middleware('api')
-            ->group(base_path('routes/api.php'));
+        Route::middleware('api')
+         ->group(base_path('routes/api.php'));
     }
 }
